@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>正在打开视频</title>
+  <meta name="referrer" content="no-referrer">
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Microsoft YaHei", sans-serif;
+      background: #f6f7f9;
+      color: #111;
+    }
+    .wrap {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: #fff;
+      border-radius: 18px;
+      padding: 28px 22px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+      text-align: center;
+    }
+    h1 {
+      font-size: 22px;
+      margin: 0 0 12px;
+    }
+    p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #555;
+      margin: 8px 0;
+    }
+    .btn {
+      display: block;
+      margin: 22px auto 10px;
+      padding: 14px 18px;
+      border-radius: 999px;
+      background: #07c160;
+      color: #fff;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 600;
+    }
+    .tip {
+      font-size: 13px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>正在打开视频</h1>
+      <p>如果没有自动跳转，请点击下面按钮。</p>
+      <a class="btn" id="openBtn" href="https://weixin.qq.com/sph/AokStIsJb5">点击查看视频</a>
+      <p class="tip">兼容微信扫码、鸿蒙微信、安卓、iPhone 浏览器兜底打开。</p>
+    </div>
+  </div>
+
+  <script>
+    const target = "https://weixin.qq.com/sph/AokStIsJb5";
+    function openVideo() {
+      window.location.href = target;
+    }
+    setTimeout(openVideo, 900);
+  </script>
+</body>
+</html>
